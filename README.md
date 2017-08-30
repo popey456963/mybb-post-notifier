@@ -1,1 +1,0 @@
-# mybb-post-notifier

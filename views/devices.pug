@@ -1,0 +1,29 @@
+html
+  head
+    title= 'CLWO Push'
+  body
+    table
+      thead
+        tr
+          th Identity
+          th Type
+          th Nickname
+          th Action
+      tbody
+        for device in devices.devices
+          tr
+            th= device.iden
+            th= device.type
+            th= device.nickname
+            - if ( enabled.indexOf(device.iden) > -1 )
+              th: button(onclick=`disable('${api_key}', '${device.iden}')`) Disable
+            - else
+              th: button(onclick=`enable('${api_key}', '${device.iden}')`) Enable
+    script.
+      function disable(key, identity) {
+        window.location.replace('/disable/' + key + '/' + identity)
+      }
+      
+      function enable(key, identity) {
+        window.location.replace('/enable/' + key + '/' + identity)
+      }

@@ -1,0 +1,13 @@
+<form>
+  API Key:<br>
+  <input type="text" id="key" name="key" placeholder="Your API Key">
+  <br><br>
+  <input type="submit" id="submit" value="Submit">
+</form>
+
+<script>
+document.getElementById('submit').addEventListener('click', function(e) {
+  e.preventDefault()
+  window.location.replace('/devices?key=' + encodeURIComponent(document.getElementById('key').value))
+})
+</script>
