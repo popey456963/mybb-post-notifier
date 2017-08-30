@@ -84,7 +84,7 @@ function save() {
 }
 
 // ;(async () => { push_post(await get_post_info(25431)) })()
-latest_post()
+setInterval(latest_post, 30000)
 
 app.get('/', (req, res) => { res.render('index') })
 
@@ -109,6 +109,6 @@ app.get('/devices', (req, res) => {
   })
 })
 
-app.listen(3000, function () {
-  console.log('Example app listening on port 3000!')
+app.listen(3070, function () {
+  console.log('Example app listening on port 3070!')
 })
