@@ -20,6 +20,8 @@ The API, by default, binds to :3070.  It contains the following endpoints:
  - `/enable/<key>/<device_id>` - Enables a device.
  - `/disable/<key>/<device_id>` - Disables a device.
 
+Want to run this on a forum other than `https://clwo.eu`?  You'll need to change all instances of that text to your own URL within `index.js`.
+
 ## License
 
 ISC © [popey456963](https://github.com/popey456963)
